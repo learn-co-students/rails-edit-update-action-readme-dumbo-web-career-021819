@@ -1,0 +1,12 @@
+<h1>Edit Article</h1>
+
+<%= form_tag article_path(@article) do %>
+  <input type="hidden" name="_method" value="patch">
+  <label>Article title:</label><br>
+  <%= text_field_tag :'article[title]', :value => @article.title %><br>
+
+  <label>Article Description</label><br>
+  <%= text_area_tag :'article[description]', :value => @article.description %><br>
+
+  <%= submit_tag "Submit Article" %>
+<% end %>
